@@ -1,8 +1,12 @@
 <template id="app">
+  <!-- 页面主体 -->
   <div :style="bgImg">
+    <!-- 主页头部 -->
     <main-header></main-header>
+    <!-- 主页待办事项 -->
     <main-to-do></main-to-do>
-    <main-footer></main-footer>
+    <!-- 主页底部 -->
+    <!-- <main-footer></main-footer> -->
   </div>
 </template>
 
@@ -20,10 +24,11 @@ export default {
   },
   data() {
     return {
+      // 背景图片
       bgImg: {
-        backgroundImage: "url(" + require("../src/assets/bg.jpg") + ")",
+        backgroundImage: "url(" + require("../src/assets/bg3.jpeg") + ")",
         backgroundRepeat: "no-repeat",
-        height: "1000px",
+        height: "600px",
         width: "100%",
         backgroundSize: "cover"
         }

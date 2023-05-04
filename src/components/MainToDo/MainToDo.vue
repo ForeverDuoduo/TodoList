@@ -29,15 +29,19 @@ export default {
                 completed:false
             })
             this.content='' 
+            localStorage.setItem('todoData', JSON.stringify(this.todoData))
         },
         handleDeleteItem(id){
             this.todoData.splice(this.todoData.findIndex(item=>item.id===id),1)
+            localStorage.setItem('todoData', JSON.stringify(this.todoData))
         },
         handleToggleState(state){
             this.filter=state
+            localStorage.setItem('filter', state)
         },
         handleClear(){
             this.todoData=this.todoData.filter(item=>item.completed==false)
+            localStorage.setItem('todoData', JSON.stringify(this.todoData))
         }
     },
     watch:{
@@ -45,6 +49,7 @@ export default {
             deep:true,
             handler(){
                 this.total=this.todoData.filter(item=>item.completed==false).length
+                localStorage.setItem('todoData', JSON.stringify(this.todoData))
             }
         }
     },
@@ -66,6 +71,23 @@ export default {
     components:{
         TodoItem:TodoItem,
         TodoInfo:TodoInfo
+    },
+    mounted(){
+        if(localStorage.getItem('todoData')){
+            try{
+                this.todoData=JSON.parse(localStorage.getItem('todoData'))
+                id=this.todoData[0].id+1
+            }catch(e){
+                localStorage.removeItem('todoData')
+            }
+        }
+        if(localStorage.getItem('filter')){
+            try{
+                this.filter=localStorage.getItem('filter')
+            }catch(e){
+                localStorage.removeItem('filter')
+            }
+        }
     }
 }
 </script>
