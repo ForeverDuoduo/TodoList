@@ -9,9 +9,6 @@
 </template>
 
 
-
-
-
 <script>
 import TodoItem from './coms/TodoItem.vue'
 import TodoInfo from './coms/TodoInfo.vue'

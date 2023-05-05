@@ -1,3 +1,4 @@
+
 <template>
   <!-- todo项的模板 -->
   <div :class="['todo-item',todo.completed?'completed':'']">
@@ -10,7 +11,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'TodoItem',
 
@@ -50,13 +50,14 @@ export default {
   border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
-/*!* 鼠标悬停在删除按钮上时，显示x *!*/
+/* 鼠标悬停在删除按钮上时，显示x */
 /*.todo-item:hover el-button::after{*/
 /*    position: relative;*/
 /*    content:'xxx';*/
 /*    font-size:20px;*/
 /*    color:rgb(95, 127, 255);*/
 /*}*/
+
 /* 已完成的todo项添加删除线 */
 .completed::after {
   content: '';
