@@ -5,8 +5,6 @@
     <main-header></main-header>
     <!-- 主页待办事项 -->
     <main-to-do></main-to-do>
-    <!-- 主页底部 -->
-    <!-- <main-footer></main-footer> -->
   </div>
 </template>
 
@@ -17,10 +15,10 @@ import MainFooter from './components/MainFooter.vue'
 
 export default {
   name: 'App',
-  components:{
-    MainHeader:MainHeader,
-    MainToDo:MainToDo,
-    MainFooter:MainFooter
+  components: {
+    MainHeader: MainHeader,
+    MainToDo: MainToDo,
+    MainFooter: MainFooter
   },
   data() {
     return {
@@ -31,9 +29,9 @@ export default {
         height: "600px",
         width: "100%",
         backgroundSize: "cover"
-        }
-     }
- },
+      }
+    }
+  },
 }
 
 </script>

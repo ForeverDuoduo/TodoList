@@ -1,12 +1,12 @@
 <template>
-    <header class="main-header">
-        <h1>miaomiao代办事项</h1>
-    </header>
+  <header class="main-header">
+    <h1>miaomiao代办事项</h1>
+  </header>
 </template>
 
 <script>
 export default {
-    name:'MainHeader'
+  name: 'MainHeader'
 }
 </script>
 
@@ -20,16 +20,17 @@ export default {
   font-style: normal;
 }
 
-.main-header{
-    text-align: center;
+.main-header {
+  text-align: center;
   font-family: '千图雪花体', sans-serif;
 }
-h1{
-    margin:20px;
-    font-size:70px;
-    font-weight:100;
-    color:rgb(161, 169, 241);
-    text-shadow:5px 5px 5px rgba(0,0,0,0.1);
+
+h1 {
+  margin: 20px;
+  font-size: 70px;
+  font-weight: 100;
+  color: rgb(161, 169, 241);
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 </style>
 
