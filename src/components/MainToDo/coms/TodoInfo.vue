@@ -9,7 +9,8 @@
             <a :class="[state==item?'active':'']" v-for="(item,index) in states" :key="index" @click="toggleState(item)">{{item}}</a>
         </div>
         <!-- 清除已完成任务按钮 -->
-        <button class="clear" @click="clearCompleted">Clear Completed</button>
+
+        <el-button class="clear" @click="clearCompleted">Clear Completed</el-button>
     </div>
 </template>
 

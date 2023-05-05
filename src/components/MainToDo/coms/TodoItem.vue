@@ -23,7 +23,7 @@ name:'TodoItem',
         delItem(){
             this.isDisabled = true
             this.$emit('del',this.todo.id)
-            localStorage.setItem('buttonStatus', JSON.stringify(this.isDisabled)) // 使用本地存储保存按钮状态            
+            localStorage.setItem('buttonStatus', JSON.stringify(this.isDisabled)) // 使用本地存储保存按钮状态
         }
     }
 }
@@ -70,8 +70,8 @@ label{
 }
 /* 删除按钮样式 */
 button{
-    width:40px; 
-    background-color:transparent; 
+    width:40px;
+    background-color:transparent;
     appearance: none;
     border:none;
     outline: none;
